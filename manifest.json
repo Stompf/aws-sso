@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "AWS SSO Containers",
+  "version": "1.1",
+  "description": "Open AWS SSO in container tabs",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{ba65cf0b-334d-4c5d-8f8e-da566a45198b}"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "cookies",
+    "contextualIdentities",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "https://*.awsapps.com/start/*",
+    "https://*.amazonaws.com/federation/console?*"
+  ],
+  "background": {
+    "scripts": [
+      "dist/index.js"
+    ]
+  }
+}

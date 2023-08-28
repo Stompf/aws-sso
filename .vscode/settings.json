@@ -1,0 +1,9 @@
+{
+	"[typescript]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"git.ignoreLimitWarning": true
+}

@@ -1,0 +1,32 @@
+{
+	"$schema": "./node_modules/rome/configuration_schema.json",
+	"files": {
+		"ignore": [
+			"*.js"
+		]
+	},
+	"organizeImports": {
+		"enabled": false
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"nursery": {
+				"useGroupedTypeImport": "error"
+			},
+			"correctness": {
+				"all": true,
+				"noUndeclaredVariables": "off"
+			}
+		}
+	},
+	"formatter": {
+		"lineWidth": 100
+	}
+}
