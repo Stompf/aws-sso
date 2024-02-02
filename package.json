@@ -9,7 +9,8 @@
     "fix": "biome check . --apply-unsafe && biome format . --write",
     "build": "rm -rf dist && esbuild src/index.ts --outdir=dist --bundle",
     "sign": "npm run build && web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET",
-    "lint": "web-ext lint"
+    "lint": "web-ext lint",
+    "build-zip": "npm run build && web-ext build"
   },
   "author": "Anton Lundmark",
   "license": "ISC",
