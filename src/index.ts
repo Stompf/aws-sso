@@ -33,11 +33,25 @@ function randomIcon() {
 	return availableContainerIcons[(Math.random() * availableContainerIcons.length) | 0];
 }
 
-function randomColor() {
+function getColor(name: string) {
+	if (["prod", "production"].some(el => name.includes(el))) {
+		return "red";
+	}
+
+	if (["stage"].some(el => name.includes(el))) {
+		return "yellow";
+	}
+
+	if (["dev", "development"].some(el => name.includes(el))) {
+		return "green";
+	}
+
 	return availableContainerColors[(Math.random() * availableContainerColors.length) | 0];
 }
 
 async function prepareContainer({ name, cb }: Container) {
+	console.log(name)
+
 	const containers = await browser.contextualIdentities.query({
 		name: name,
 	});
@@ -47,7 +61,7 @@ async function prepareContainer({ name, cb }: Container) {
 	} else {
 		const container = await browser.contextualIdentities.create({
 			name: name,
-			color: randomColor(),
+			color: getColor(name.toLowerCase()),
 			icon: randomIcon(),
 		});
 		cb(container);
