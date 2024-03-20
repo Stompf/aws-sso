@@ -4,3 +4,15 @@ export type Container = {
 	icon?: string;
 	cb: (container: browser.contextualIdentities.ContextualIdentity) => void;
 };
+
+export type Details = {
+	requestId: string;
+};
+
+export type AccountFilterResponse = {
+	result: AccountFilterResult[];
+};
+
+export type AccountFilterResult = {
+	searchMetadata?: { AccountId: string; AccountName: string };
+};
