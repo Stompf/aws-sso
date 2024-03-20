@@ -1,4 +1,4 @@
-import { AccountFilterResponse, Container, Details } from "./types";
+import type { AccountFilterResponse, Container, Details } from "./types";
 
 // Container code mostly taken from
 // https://github.com/honsiorovskyi/open-url-in-container
