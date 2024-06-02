@@ -15,10 +15,10 @@
   "author": "Anton Lundmark",
   "license": "ISC",
   "devDependencies": {
-    "@biomejs/biome": "1.6.1",
-    "esbuild": "0.20.2",
-    "typescript": "5.4.3",
-    "web-ext": "7.11.0"
+    "@biomejs/biome": "1.7.3",
+    "esbuild": "0.21.4",
+    "typescript": "5.4.5",
+    "web-ext": "8.0.0"
   },
   "dependencies": {
     "@types/firefox-webext-browser": "120.0.3"
